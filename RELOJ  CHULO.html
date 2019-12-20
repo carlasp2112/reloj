@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset ="UTF-8">
+		<style>
+			#cuadro{
+				background-color:#b3d9ff;                  
+                width: auto;
+				text-align: center;
+				height:auto;
+				border:inset #66b3ff 10px;
+				margin: 40px;
+				padding:70px;
+				color:gray
+			}
+			#fondo, #contenedor{
+				text-align: center;
+				background-color: #b3b3ff;
+			}
+			#demo{
+				text-align: center;
+			}
+		</style>
+		<script>
+			function f() {
+				var hoy = new Date();
+				var h = hoy.getHours();
+				var m = hoy.getMinutes();
+				var s = hoy.getSeconds();
+				document.getElementById('demo').innerHTML= h + ":" + m + ":" + s;
+				document.getElementById('cuadro').style.color= 'white';
+				document.getElementById('cuadro').style.backgroundColor= '#9999e6';
+				document.getElementById('cuadro').style.borderColor = '#5c5cd6';
+				setInterval(f ,1000);
+			}
+			
+		</script>
+	</head>
+	<body id="contenedor">
+		<div id="fondo">
+			<h1>Reloj</h1>
+			<button onclick="f()" onload=f()>Qué hora es?</button>
+			<div id="cuadro">
+				<br>
+				<br>
+				<br>
+				<h1 id="demo">¿Qué hora es?</h1>
+			</div>
+		</div>
+	</body>
+</html>
